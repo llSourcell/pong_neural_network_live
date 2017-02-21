@@ -69,8 +69,9 @@ def trainGraph(inp, out, sess):
     argmax = tf.placeholder("float", [None, ACTIONS]) 
     gt = tf.placeholder("float", [None]) #ground truth
 
-    #action
-    action = tf.reduce_sum(tf.mul(out, argmax), reduction_indices = 1)
+    #action 
+    #tf.mul Depricated use tf.multiply
+    action = tf.reduce_sum(tf.multiply(out, argmax), reduction_indices = 1)
     #cost function we will reduce through backpropagation
     cost = tf.reduce_mean(tf.square(action - gt))
     #optimization fucntion to reduce our minimize our cost function 
@@ -158,6 +159,9 @@ def trainGraph(inp, out, sess):
                            argmax : argmax_batch,
                            inp : inp_batch
                            })
+            
+            #Set Timestep to 0 for next batch?? Siraj I'm not breaking the logic with this right. 50000 is our batch?
+            t=0
         
         #update our input tensor the the next frame
         inp_t = inp_t1
