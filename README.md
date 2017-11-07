@@ -8,13 +8,13 @@ the game of [Pong](http://www.ponggame.org) from scratch. Then I build a [Deep Q
 
 
 * tensorflow (https://www.tensorflow.org)
-* cv2 (http://www.pyimagesearch.com/2015/06/15/install-opencv-3-0-and-python-2-7-on-osx/)
+* cv2 (https://pypi.python.org/pypi/opencv-python)
 * numpy
 * random
 * collections
 * pygame
 
-use [pip](https://pypi.python.org/pypi/pip) to install the dependencies. Tensorflow and cv2 are more manual. Links provided above ^
+use [pip](https://pypi.python.org/pypi/pip) to install the dependencies. Tensorflow and cv2 have pip packages but may need to be more manual. Links provided above ^
 
 ##Usage 
 
